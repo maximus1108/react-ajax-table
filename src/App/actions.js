@@ -4,13 +4,13 @@ export const setProducts = products => ({
 })
 
 export const sortByPriceAscending = _ => ({
-    type: 'BY_PRICE_ASCENDING'
+    type: 'PRICE_ASCENDING'
 })
 
 export const sortByPriceDescending = _ => ({
-    type: 'BY_PRICE_DESCENDING'
+    type: 'PRICE_DESCENDING'
 })
 
 export const sortByName = _ => ({
-    type: 'BY_NAME'
+    type: 'NAME'
 })

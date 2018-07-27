@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Filter from './Filter';
+import Sorter from './Sorter';
 import { sortByPriceAscending, sortByPriceDescending, sortByName } from '../actions';
 
     
@@ -9,4 +9,4 @@ const mapDispatchToProps = (dispatch) => ({
     sortByName: _ => dispatch(sortByName())
 })
 
-export default connect(undefined, mapDispatchToProps)(Filter)
+export default connect(undefined, mapDispatchToProps)(Sorter)

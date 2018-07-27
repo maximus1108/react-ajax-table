@@ -2,20 +2,14 @@ import React from 'react';
 import TableRow from './TableRow';
 import TableHeader from './TableHeader';
 
-export default ({ products }) => (
+export default ({ headings, data }) => (
     <table>
         <TableHeader 
-            headings={ [
-                "Logo",
-                "Merchant Name", 
-                "Product Name",
-                "Price",
-                "Link"
-            ] }
+            headings={ headings }
         />
         <tbody>
             {
-                products.map((product, i) => 
+                data.map((product, i) => 
                     <TableRow 
                         cells={ [
                             <img src={ product.merchant.logo_url }/>, 

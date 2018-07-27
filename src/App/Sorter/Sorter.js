@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 
-
 export default ({
     sortByPriceAscending,
     sortByPriceDescending,

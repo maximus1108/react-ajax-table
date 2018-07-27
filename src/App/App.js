@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { setProducts } from './actions';
 import axios from 'axios';
-import FilterContainer from './Filter/FilterContainer';
+import SorterContainer from './Sorter/SorterContainer';
 
 class App extends Component {
-    constructor(a,b) {
+    constructor() {
         super();
     }
 
@@ -23,8 +23,16 @@ class App extends Component {
         return (
             <Provider store={ store }>
                 <Fragment>
-                    <FilterContainer />
-                    <TableContainer />
+                    <SorterContainer />
+                    <TableContainer
+                        headings = {[ 
+                            "Logo",
+                            "Merchant Name", 
+                            "Product Name",
+                            "Price",
+                            "Link"
+                        ]}
+                    />
                 </ Fragment>
             </Provider>
         )
