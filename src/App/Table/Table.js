@@ -9,15 +9,9 @@ export default ({ headings, data }) => (
         />
         <tbody>
             {
-                data.map((product, i) => 
+                data.map((item, i) => 
                     <TableRow 
-                        cells={ [
-                            <img src={ product.merchant.logo_url }/>, 
-                            product.merchant.name,
-                            product.offer.name,
-                            product.offer.price,
-                            <a href={ product.offer.link }>Go to product</a>
-                        ] }
+                        cells={ item }
                         key={i}
                     />
                 )

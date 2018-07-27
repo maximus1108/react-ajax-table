@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Table from './Table';
+import React from 'react';
 
 const getSortedProducts = (products, sorter) => {
     switch(sorter) {
@@ -18,8 +19,17 @@ const getSortedProducts = (products, sorter) => {
     }
 }
 
-const mapStateToProps = (state) => ({
-    data: getSortedProducts(state.products, state.sortBy)
-})
+const mapToTableRows = products => products.map(product =>
+    [
+        <img src={ product.merchant.logo_url } />,
+        product.merchant.name,
+        product.offer.name,
+        product.offer.price,
+        <a href={ product.offer.link }>Go to product</a>
+    ]
+)
 
+const mapStateToProps = (state) => ({
+    data: mapToTableRows(getSortedProducts(state.products, state.sortBy))
+})
 export default connect(mapStateToProps)(Table)
