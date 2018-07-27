@@ -1,21 +1,9 @@
 import React from 'react';
 
-export default ({ logo, merchantName, productName, price, link }) => (
+export default ({ cells }) => (
     <tr>
-        <td>
-            <img src={logo} />
-        </td>
-        <td>
-            { merchantName }
-        </td>
-        <td>
-            { productName }
-        </td>
-        <td>
-            { price }
-        </td>
-        <td>
-            <a href={link}>Go to product</a>
-        </td>
+        {
+            cells.map(data => <td>{ data }</td>)
+        }
     </tr>
 )

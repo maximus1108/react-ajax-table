@@ -16,11 +16,13 @@ export default ({ products }) => (
             {
                 products.map((product, i) => 
                     <TableRow 
-                        logo={product.merchant.logo_url}
-                        merchantName={product.merchant.name}
-                        productName={product.offer.name}
-                        price={product.offer.price}
-                        link={product.offer.link}
+                        cells={ [
+                            <img src={ product.merchant.logo_url }/>, 
+                            product.merchant.name,
+                            product.offer.name,
+                            product.offer.price,
+                            <a href={ product.offer.link }>Go to product</a>
+                        ] }
                         key={i}
                     />
                 )
