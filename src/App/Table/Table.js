@@ -1,17 +1,18 @@
 import React from 'react';
 import TableRow from './TableRow';
+import TableHeader from './TableHeader';
 
 export default ({ products }) => (
     <table>
-        <thead>
-            <tr >
-                <td> Logo </td>
-                <td> Merchant Name </td>
-                <td> Product Name </td>
-                <td> Price </td>
-                <td> Link </td>
-            </tr>
-        </thead>
+        <TableHeader 
+            headings={ [
+                "Logo",
+                "Merchant Name", 
+                "Product Name",
+                "Price",
+                "Link"
+            ] }
+        />
         <tbody>
             {
                 products.map((product, i) => 

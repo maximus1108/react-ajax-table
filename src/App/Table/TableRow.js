@@ -3,7 +3,7 @@ import React from 'react';
 export default ({ cells }) => (
     <tr>
         {
-            cells.map(data => <td>{ data }</td>)
+            cells.map((data, i) => <td key={i}>{ data }</td>)
         }
     </tr>
 )
